@@ -1,0 +1,14 @@
+Determining if the include file pthread.h exists failed with the following output:
+Change Dir: C:/Eternal/Raw/Battle_City/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_8b771.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && Microsoft (R) Build Engine version 17.1.0+ae57d105c for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.31.31104 для x64
+  CheckIncludeFile.c
+  (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8b771.dir\Debug\\" /Fd"cmTC_8b771.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue C:\Eternal\Raw\Battle_City\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+C:\Eternal\Raw\Battle_City\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1,10): fatal error C1083: Не удается открыть файл включение: pthread.h: No such file or directory, [C:\Eternal\Raw\Battle_City\CMakeFiles\CMakeTmp\cmTC_8b771.vcxproj]
+
+
+

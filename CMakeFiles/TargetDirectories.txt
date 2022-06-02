@@ -1,0 +1,8 @@
+C:/Eternal/Raw/Battle_City/CMakeFiles/Battle_City.dir
+C:/Eternal/Raw/Battle_City/CMakeFiles/ALL_BUILD.dir
+C:/Eternal/Raw/Battle_City/CMakeFiles/ZERO_CHECK.dir
+C:/Eternal/Raw/Battle_City/external/glfw/CMakeFiles/ALL_BUILD.dir
+C:/Eternal/Raw/Battle_City/external/glfw/src/CMakeFiles/glfw.dir
+C:/Eternal/Raw/Battle_City/external/glfw/src/CMakeFiles/update_mappings.dir
+C:/Eternal/Raw/Battle_City/external/glad/CMakeFiles/glad.dir
+C:/Eternal/Raw/Battle_City/external/glad/CMakeFiles/ALL_BUILD.dir
