@@ -1,8 +1,10 @@
 cmake_minimum_required(VERSION 3.23.2 FATAL_ERROR)
 
 set(PROJECT_NAME Battle_City)
-
 project(${PROJECT_NAME})
+
+set(CMAKE_CXX_STANDART 20)
+
 add_executable(${PROJECT_NAME} src/main.cpp)
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
