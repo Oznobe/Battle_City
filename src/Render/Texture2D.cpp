@@ -8,12 +8,15 @@ namespace Render {
 						const GLenum filter, 
 						const GLenum wrapMode) : m_width(width), m_height(height) {
 		glGenTextures(1, &m_ID);
+		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, m_ID);
 		switch (channels) {
 			case 4:
 				m_mode = GL_RGBA;
+				break;
 			case 3:
 				m_mode = GL_RGB;
+				break;
 		default:
 			m_mode = GL_RGBA;
 			break;
