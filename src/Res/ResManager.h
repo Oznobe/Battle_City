@@ -3,6 +3,7 @@
 #include <string>
 #include <memory>
 #include <map>
+#include <vector>
 
 namespace Render {
 	class ShaderProgram;
@@ -34,9 +35,15 @@ namespace Resources {
 												const std::string& textureName, 
 												const std::string& shaderName,
 												const unsigned int spriteWidth,
-												const unsigned int spriteHeight);
+												const unsigned int spriteHeight,
+												const std::string& subTextureName = "default");
 		std::shared_ptr <Render::Sprite> getSprite(const std::string& spriteName);
 
+		std::shared_ptr <Render::Texture2D> loadTextureAtlas(const std::string textureName,
+														     const std::string texturePath,
+															 const std::vector<std::string> subTextures,
+															 const unsigned int subTextureWidth,
+															 const unsigned int subTextureHeight);
 
 	private:
 		std::string getFileString(const std::string& relativeFilePath) const;
