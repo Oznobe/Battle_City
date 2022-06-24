@@ -14,6 +14,10 @@ add_executable(${PROJECT_NAME}
 	src/Render/Texture2D.cpp
 	src/Render/Sprite.cpp
 	src/Render/Sprite.h
+	src/Render/AnimatedSprite.cpp
+	src/Render/AnimatedSprite.h
+	src/Game/Game.h
+	src/Game/Game.cpp
 )
 
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20)
