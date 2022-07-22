@@ -12,10 +12,27 @@
 #define STBI_ONLY_PNG
 #include "stb_image.h"
 
+
+
 namespace Resources {
-	ResourceManager::ResourceManager(const std::string& executablePath) {
+	ResourceManager::ShaderProgramsMap ResourceManager::m_shaderPrograms;
+	ResourceManager::TexturesMap ResourceManager::m_textures;
+	ResourceManager::SpritesMap ResourceManager::m_sprites;
+	ResourceManager::AnimatedSpritesMap ResourceManager::m_animatedSprites;
+	std::string ResourceManager::m_path;
+
+	void ResourceManager::SetExecutablePath(const std::string& executablePath) {
 		size_t found = executablePath.find_last_of("/\\");
 		m_path = executablePath.substr(0, found);
+	}
+
+	void ResourceManager::unloadAllResources()
+	{
+		m_shaderPrograms.clear();
+		m_textures.clear();
+		m_sprites.clear();
+		m_animatedSprites.clear();
+		//m_path.clear();
 	}
 
 	std::shared_ptr<Render::ShaderProgram> ResourceManager::loadShaders(const std::string& shaderName, const std::string& vertexPath, const std::string& fragmentPath) {
@@ -147,7 +164,7 @@ namespace Resources {
 			if (!pShader) {
 				std::cerr << "Can`t open the shader" + shaderName + " for the sprite: " + spriteName + "\n";
 			}
-			std::shared_ptr<Render::AnimatedSprite> newSprite = m_animatedSprites.emplace(textureName,
+			std::shared_ptr<Render::AnimatedSprite> newSprite = m_animatedSprites.emplace(spriteName,
 				std::make_shared<Render::AnimatedSprite>(pTexture,
 					subTextureName,
 					pShader,
@@ -166,7 +183,7 @@ namespace Resources {
 		return nullptr;
 	}
 
-	std::string ResourceManager::getFileString(const std::string& relativeFilePath) const {
+	std::string ResourceManager::getFileString(const std::string& relativeFilePath) {
 		std::ifstream f;
 		f.open(m_path + "/" + relativeFilePath.c_str(), std::ios::in | std::ios::binary);
 		if (!f.is_open()) {
